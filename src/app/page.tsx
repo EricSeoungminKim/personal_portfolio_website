@@ -1,4 +1,5 @@
 import {
+  careerObjective,
   contactLinks,
   courseworkGroups,
   experiences,
@@ -10,6 +11,7 @@ import {
   whoAmITimeline,
 } from "@/data/personal";
 import { HeroSection } from "@/app/_components/hero-section";
+import { CareerSection } from "@/app/_components/career-section";
 import { ExperienceSection } from "@/app/_components/experience-section";
 import { SkillsSection } from "@/app/_components/skills-section";
 import { CourseworkSection } from "@/app/_components/coursework-section";
@@ -19,6 +21,7 @@ export default function HomePage() {
   return (
     <main className="relative mx-auto flex max-w-5xl flex-col gap-16 px-6 py-16 md:py-24">
       <HeroSection introText={heroIntroText} contactLinks={contactLinks} />
+      <CareerSection objective={careerObjective} />
       <ExperienceSection experiences={experiences} />
       <SkillsSection groups={skillGroups} gradients={skillCardGradients} />
       <CourseworkSection

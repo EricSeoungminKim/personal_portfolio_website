@@ -52,7 +52,7 @@ export const contactLinks: ContactLink[] = [
 ];
 
 export const careerObjective =
-  "Seeking Software Engineer or DevOps Engineer roles to apply cloud infrastructure, CI/CD, and containerization expertise in real-world production systems while delivering reliable developer experiences for cross-functional teams.";
+  "Seeking Software Engineer or DevOps Engineer roles to apply cloud infrastructure, CI/CD, and containerization expertise in real-world production systems while delivering reliable developer experiences for cross-functional teams. Looking to contribute to innovative projects that challenge my skills and foster growth. ";
 
 export const experiences: Experience[] = [
   {

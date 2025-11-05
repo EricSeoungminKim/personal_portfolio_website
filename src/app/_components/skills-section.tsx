@@ -12,7 +12,9 @@ export function SkillsSection({ groups, gradients }: SkillsSectionProps) {
         <h2 className="bg-gradient-to-r from-[#6fffe9] via-[#5bc0be] to-[#8a9bcd] bg-clip-text text-2xl font-semibold text-transparent">
           Technical Skills
         </h2>
-        <p className="text-xs uppercase tracking-[0.3em] text-[#8a9bcd]">Stack coverage</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-[#8a9bcd]">
+          Stack coverage
+        </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {groups.map((group, index) => (
