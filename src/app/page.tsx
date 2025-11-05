@@ -1,18 +1,15 @@
 import {
-  careerObjective,
   contactLinks,
   courseworkGroups,
   experiences,
   heroIntroText,
   skillCardGradients,
   skillGroups,
-  snapshotItems,
   whoAmIHighlights,
   whoAmIIntro,
   whoAmITimeline,
 } from "@/data/personal";
 import { HeroSection } from "@/app/_components/hero-section";
-import { CareerSection } from "@/app/_components/career-section";
 import { ExperienceSection } from "@/app/_components/experience-section";
 import { SkillsSection } from "@/app/_components/skills-section";
 import { CourseworkSection } from "@/app/_components/coursework-section";
@@ -22,11 +19,17 @@ export default function HomePage() {
   return (
     <main className="relative mx-auto flex max-w-5xl flex-col gap-16 px-6 py-16 md:py-24">
       <HeroSection introText={heroIntroText} contactLinks={contactLinks} />
-      <CareerSection objective={careerObjective} snapshot={snapshotItems} />
       <ExperienceSection experiences={experiences} />
       <SkillsSection groups={skillGroups} gradients={skillCardGradients} />
-      <CourseworkSection groups={courseworkGroups} gradients={skillCardGradients} />
-      <WhoAmISection intro={whoAmIIntro} timeline={whoAmITimeline} highlights={whoAmIHighlights} />
+      <CourseworkSection
+        groups={courseworkGroups}
+        gradients={skillCardGradients}
+      />
+      <WhoAmISection
+        intro={whoAmIIntro}
+        timeline={whoAmITimeline}
+        highlights={whoAmIHighlights}
+      />
     </main>
   );
 }

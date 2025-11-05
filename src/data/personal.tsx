@@ -6,11 +6,6 @@ export type ContactLink = {
   href: string;
 };
 
-export type SnapshotItem = {
-  label: string;
-  value: ReactNode;
-};
-
 export type Experience = {
   company: string;
   role: string;
@@ -54,40 +49,10 @@ export const contactLinks: ContactLink[] = [
     value: "github.com/EricSeoungminKim",
     href: "https://github.com/EricSeoungminKim",
   },
-  {
-    label: "Portfolio",
-    value: "seoungminkimcs.netlify.app",
-    href: "https://seoungminkimcs.netlify.app",
-  },
 ];
 
 export const careerObjective =
   "Seeking Software Engineer or DevOps Engineer roles to apply cloud infrastructure, CI/CD, and containerization expertise in real-world production systems while delivering reliable developer experiences for cross-functional teams.";
-
-export const snapshotItems: SnapshotItem[] = [
-  {
-    label: "Location",
-    value: "Los Angeles, CA",
-  },
-  {
-    label: "Education",
-    value: (
-      <>
-        University of California, Los Angeles (UCLA)
-        <br />
-        B.S. Electrical Engineering, Computer Science breadth
-      </>
-    ),
-  },
-  {
-    label: "Graduation",
-    value: "Expected June 2027",
-  },
-  {
-    label: "Interests",
-    value: "Cloud automation, observability, developer platforms",
-  },
-];
 
 export const experiences: Experience[] = [
   {
@@ -138,7 +103,10 @@ export const experiences: Experience[] = [
       <>
         Managed full-cycle development across architecture, deployment, and
         optimization with{" "}
-        <span className="font-semibold text-white">cross-functional leadership</span>.
+        <span className="font-semibold text-white">
+          cross-functional leadership
+        </span>
+        .
       </>,
     ],
   },
@@ -147,15 +115,40 @@ export const experiences: Experience[] = [
 export const skillGroups: SkillGroup[] = [
   {
     category: "Cloud and DevOps",
-    items: ["AWS (S3)", "Docker", "Kubernetes", "GitHub Actions", "Vercel", "CI/CD", "Linux"],
+    items: [
+      "AWS (S3)",
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "Vercel",
+      "CI/CD",
+      "Linux",
+    ],
   },
   {
     category: "Programming Languages",
-    items: ["Python", "JavaScript", "TypeScript", "C/C++", "Dart", "SQL", "Bash"],
+    items: [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "C/C++",
+      "Dart",
+      "SQL",
+      "Bash",
+    ],
   },
   {
     category: "Frameworks and Libraries",
-    items: ["FastAPI", "Django", "React", "React Native", "Next.js", "Node.js", "Express", "Flutter"],
+    items: [
+      "FastAPI",
+      "Django",
+      "React",
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "Flutter",
+    ],
   },
   {
     category: "Databases",
@@ -163,7 +156,13 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: "Tools",
-    items: ["Git", "Postman", "VS Code", "Google Cloud Console", "Agile Collaboration"],
+    items: [
+      "Git",
+      "Postman",
+      "VS Code",
+      "Google Cloud Console",
+      "Agile Collaboration",
+    ],
   },
 ];
 
@@ -206,14 +205,21 @@ export const courseworkGroups: CourseworkGroup[] = [
 
 export const whoAmIIntro: ReactNode[] = [
   <>
-    Hello! I&apos;m <span className="font-semibold text-[#6fffe9]">Seoungmin Kim</span>, an
-    international student at the University of California, Los Angeles (UCLA), majoring in{" "}
-    <span className="font-semibold text-[#6fffe9]">Electrical Engineering</span> with a{" "}
-    <span className="font-semibold text-[#6fffe9]">Tech Breadth in Computer Science</span>.
+    Hello! I&apos;m{" "}
+    <span className="font-semibold text-[#6fffe9]">Seoungmin Kim</span>, an
+    international student at the University of California, Los Angeles (UCLA),
+    majoring in{" "}
+    <span className="font-semibold text-[#6fffe9]">Electrical Engineering</span>{" "}
+    with a{" "}
+    <span className="font-semibold text-[#6fffe9]">
+      Tech Breadth in Computer Science
+    </span>
+    .
   </>,
   <>
-    I&apos;m passionate about the intersection of software and hardware, and I love exploring new
-    technologies through hackathons, side projects, and collaborative work.
+    I&apos;m passionate about the intersection of software and hardware, and I
+    love exploring new technologies through hackathons, side projects, and
+    collaborative work.
   </>,
 ];
 
@@ -233,8 +239,8 @@ export const whoAmITimeline: TimelineEntry[] = [
     badge: "UCLA",
     description: (
       <>
-        Began studies at <strong>UCLA</strong> in Electrical Engineering with a Computer Science
-        breadth.
+        Began studies at <strong>UCLA</strong> in Electrical Engineering with a
+        Computer Science breadth.
       </>
     ),
   },
@@ -243,8 +249,8 @@ export const whoAmITimeline: TimelineEntry[] = [
     badge: "ROKAF",
     description: (
       <>
-        Served in the <strong>Republic of Korea Air Force</strong> (Civil Engineering Squadron) as
-        part of national duty.
+        Served in the <strong>Republic of Korea Air Force</strong> (Civil
+        Engineering Squadron) as part of national duty.
       </>
     ),
   },
@@ -253,7 +259,8 @@ export const whoAmITimeline: TimelineEntry[] = [
     badge: "REBOOT",
     description: (
       <>
-        Returned to UCLA, reigniting hackathon, research, and product-building momentum.
+        Returned to UCLA, reigniting hackathon, research, and product-building
+        momentum.
       </>
     ),
   },
@@ -262,7 +269,8 @@ export const whoAmITimeline: TimelineEntry[] = [
     badge: "GRAD",
     description: (
       <>
-        Expected to graduate from UCLA with a Bachelor of Science in Electrical Engineering.
+        Expected to graduate from UCLA with a Bachelor of Science in Electrical
+        Engineering.
       </>
     ),
   },
@@ -271,12 +279,13 @@ export const whoAmITimeline: TimelineEntry[] = [
 export const whoAmIHighlights: ReactNode[] = [
   <>
     I enjoy working end-to-end, from <strong>front-end interfaces</strong> to{" "}
-    <strong>backend systems</strong> and even <strong>hardware design</strong>. My goal is to
-    champion products that challenge me technically while encouraging collaborative growth.
+    <strong>backend systems</strong> and even <strong>hardware design</strong>.
+    My goal is to champion products that challenge me technically while
+    encouraging collaborative growth.
   </>,
   <>
     I&apos;m always ready for new challenges, especially{" "}
-    <strong>hackathons, startups, and research opportunities</strong>. Let&apos;s build something
-    outstanding together.
+    <strong>hackathons, startups, and research opportunities</strong>.
+    Let&apos;s build something outstanding together.
   </>,
 ];

@@ -24,10 +24,4 @@ export const contactMethods: ContactMethod[] = [
     description: "Connect for professional updates and collaborations.",
     cta: "Connect on LinkedIn",
   },
-  {
-    label: "Portfolio",
-    href: "https://seoungminkimcs.netlify.app",
-    description: "Browse a polished snapshot of my work and achievements.",
-    cta: "Open Portfolio",
-  },
 ];
