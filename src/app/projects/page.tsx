@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import { projects, type Project } from "@/data/projects";
@@ -18,19 +18,27 @@ export default function ProjectsPage() {
           Projects & Case Studies
         </h1>
         <p className="text-base text-[#d2dbe7]">
-          A mix of individual and collaborative efforts spanning backend services, cloud
-          infrastructure, and full-stack experiences. Choose a project to jump directly to its GitHub
-          repository or the deployed experience.
+          A mix of individual and collaborative efforts spanning backend
+          services, cloud infrastructure, and full-stack experiences. Choose a
+          project to jump directly to its GitHub repository or the deployed
+          experience.
         </p>
       </header>
 
       <div className="space-y-8">
         {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} onSelect={setSelectedProject} />
+          <ProjectCard
+            key={project.title}
+            project={project}
+            onSelect={setSelectedProject}
+          />
         ))}
       </div>
 
-      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 }

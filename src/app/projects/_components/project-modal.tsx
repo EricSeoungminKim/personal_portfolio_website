@@ -43,7 +43,10 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         onClick={(event) => event.stopPropagation()}
       >
         <div className="space-y-2">
-          <h3 id="project-modal-title" className="text-xl font-semibold text-white">
+          <h3
+            id="project-modal-title"
+            className="text-xl font-semibold text-white"
+          >
             {project.title}
           </h3>
           <p className="text-sm text-[#a5b8ce]">{project.position}</p>
