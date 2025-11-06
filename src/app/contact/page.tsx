@@ -11,9 +11,8 @@ export default function ContactPage() {
           Let&apos;s Collaborate
         </h1>
         <p className="mx-auto max-w-2xl text-base text-[#d2dbe7]">
-          Whether you have a project in mind, need backend help, or want to chat
-          about cloud infrastructure, I&apos;m just a click away. Choose the
-          channel that works best for you.
+          I&apos;m just a click away <br />
+          Choose the channel that works best for you
         </p>
       </header>
 
@@ -37,7 +36,10 @@ export default function ContactPage() {
               </p>
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#6fffe9]">
                 {method.cta}
-                <span aria-hidden className="transition group-hover:translate-x-1">
+                <span
+                  aria-hidden
+                  className="transition group-hover:translate-x-1"
+                >
                   -&gt;
                 </span>
               </span>
