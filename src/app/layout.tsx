@@ -20,13 +20,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className={geist.variable + " " + instrumentSerif.variable}>
         <ScrollProgress />
         <header className="site-header">
           <div className="section-shell header-inner">
             <Link href="/" className="brand" aria-label="Seoungmin Kim, home">S<span>—</span>K<span className="brand-dot">.</span></Link>
-            <nav className="main-nav" aria-label="Main navigation"><Link href="/#work">Work</Link><Link href="/#experience">Experience</Link><Link href="/#about">About</Link></nav>
+            <nav className="main-nav" aria-label="Main navigation"><Link href="/#work">Work</Link><Link href="/#experience">Experience</Link><Link href="/#hackathons">Hackathons</Link><Link href="/#about">About</Link></nav>
             <Link className="header-contact" href="/#contact">Let’s talk <span aria-hidden="true">↗</span></Link>
           </div>
         </header>

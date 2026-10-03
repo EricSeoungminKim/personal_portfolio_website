@@ -13,7 +13,7 @@ Open http://localhost:3000. Run `npm run lint` and `npm run build` before publis
 
 ## Updating content
 
-- `src/data/portfolio.ts`: featured projects, experience, and contact links
+- `src/data/portfolio.ts`: featured projects, experience, hackathons, and contact links
 - `src/app/page.tsx`: home page copy and section order
 - `public/Seoungmin_Kim_Resume.pdf`: downloadable résumé
 

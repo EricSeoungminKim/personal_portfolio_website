@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProjectFeature } from "@/app/_components/project-feature";
 import { Reveal } from "@/app/_components/reveal";
-import { email, experience, github, linkedin, projects } from "@/data/portfolio";
+import { email, experience, github, hackathons, linkedin, projects } from "@/data/portfolio";
 
 export default function HomePage() {
   return (
@@ -23,7 +23,7 @@ export default function HomePage() {
             <span className="portrait-note">UCLA ’27 <span aria-hidden="true">↗</span><br />ELECTRICAL ENGINEERING</span>
           </div>
         </div>
-        <div className="hero-footer"><span>SCROLL TO EXPLORE</span><span>01 — 04</span></div>
+        <div className="hero-footer"><span>SCROLL TO EXPLORE</span><span>01 — 05</span></div>
       </section>
 
       <div className="ticker" aria-hidden="true"><div className="ticker-track">ENGINEERED WITH INTENT <span>✳</span> BUILT FOR PEOPLE <span>✳</span> ENGINEERED WITH INTENT <span>✳</span> BUILT FOR PEOPLE <span>✳</span></div></div>
@@ -55,9 +55,25 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="hackathons-section" id="hackathons">
+        <div className="section-shell">
+          <Reveal className="section-heading">
+            <div className="eyebrow"><span>03 / HACKATHONS</span><span>IDEAS MADE TOGETHER</span></div>
+            <div className="heading-row"><h2>Built in a <em>weekend.</em></h2><p>Short deadlines, new teammates, and ideas made real.</p></div>
+          </Reveal>
+          <div className="hackathon-grid">
+            {hackathons.map((item, index) => <Reveal key={item.event} className="hackathon-card" delay={index * 0.08}>
+              <div className="hackathon-card-top"><span>0{index + 1} / {item.event}</span><span aria-hidden="true">✳</span></div>
+              <div><p className="hackathon-result">{item.result}</p><h3>{item.project}</h3><p className="hackathon-description">{item.description}</p></div>
+              <a className="text-link" href={item.url} target="_blank" rel="noopener noreferrer">View on Devpost <span aria-hidden="true">↗</span></a>
+            </Reveal>)}
+          </div>
+        </div>
+      </section>
+
       <section className="about-section" id="about">
         <div className="section-shell about-grid">
-          <Reveal className="about-title"><div className="eyebrow"><span>03 / ABOUT</span></div><h2>Curious by<br />nature.<br /><em>Practical</em><br />by design.</h2></Reveal>
+          <Reveal className="about-title"><div className="eyebrow"><span>04 / ABOUT</span></div><h2>Curious by<br />nature.<br /><em>Practical</em><br />by design.</h2></Reveal>
           <Reveal className="about-copy" delay={0.1}>
             <p className="about-lead">I’m Seoungmin, an Electrical Engineering student at UCLA. I like software that holds up in the details and feels straightforward to use.</p>
             <p>I’ve worked on newsroom APIs, an iOS finance app, a paper-trading engine, and tools for job seekers. The common thread is turning complicated systems into clear, dependable products.</p>
@@ -69,7 +85,7 @@ export default function HomePage() {
 
       <section className="contact-section section-shell" id="contact">
         <Reveal>
-          <div className="eyebrow"><span>04 / CONTACT</span><span>HAVE AN IDEA?</span></div>
+          <div className="eyebrow"><span>05 / CONTACT</span><span>HAVE AN IDEA?</span></div>
           <h2>Let’s make<br /><em>something</em> work.</h2>
           <a className="contact-email" href={"mailto:" + email}>{email}<span aria-hidden="true">↗</span></a>
           <div className="contact-bottom"><span>GOOD THINGS START WITH A CONVERSATION.</span><Link href="/contact" className="text-link">More ways to connect ↗</Link></div>

@@ -63,6 +63,38 @@ export const projects: Project[] = [
     github: "https://github.com/EricSeoungminKim/whats_my_ats",
     live: "https://whats-my-ats.vercel.app/",
   },
+  {
+    number: "04",
+    slug: "mom",
+    title: "Mom, Where Is It?",
+    eyebrow: "Spatial computing / prototype",
+    period: "2026",
+    summary:
+      "A prototype that labels objects from a webcam, maps furniture from a room scan, and answers natural-language questions about where things are.",
+    details: [
+      "Built webcam object segmentation and personalized vision labels with a Redis cache.",
+      "Turned RoomPlan scans into room-tagged furniture anchors stored in ChromaDB.",
+      "Prototyped natural-language location queries; small-object mapping remains paused pending an iPhone LiDAR capture workflow.",
+    ],
+    stack: ["Python", "YOLOv8", "RoomPlan", "ChromaDB"],
+    github: "https://github.com/EricSeoungminKim/mom_where_is_this",
+  },
+  {
+    number: "05",
+    slug: "bruin",
+    title: "Bruin Bites",
+    eyebrow: "Team product / campus dining",
+    period: "2025",
+    summary:
+      "A UCLA dining app for budget-friendly food spots, recipes, and community posts. I built mobile flows and connected them to the backend.",
+    details: [
+      "Implemented mobile map and contribution flows in the Expo app.",
+      "Connected authentication, contributions, and map features to the Express backend.",
+      "Collaborated in the Bruin-Bites GitHub organization; the linked frontend repository is public.",
+    ],
+    stack: ["React Native", "Expo", "Express", "MongoDB"],
+    github: "https://github.com/Bruin-Bites/frontend",
+  },
 ];
 
 export const experience = [
@@ -89,6 +121,25 @@ export const experience = [
     period: "May — Dec 2023",
     description:
       "Founded a pickup basketball platform and shipped its MERN app on Vercel with AWS S3 assets.",
+  },
+];
+
+export const hackathons = [
+  {
+    event: "HackSC 2023",
+    project: "NetChill",
+    result: "1st place · Global Connections",
+    description:
+      "A mobile app that makes meeting new people easier. I built the Express backend, deployed it on AWS EC2, and helped with the Flutter app.",
+    url: "https://devpost.com/software/netchill",
+  },
+  {
+    event: "LA Hacks 2023",
+    project: "Hang!",
+    result: "Hackathon project",
+    description:
+      "A mobile hangout planner with shared itineraries and optimized routes. I worked on the React Native frontend and Google Maps integration.",
+    url: "https://devpost.com/software/hang-h8mecf",
   },
 ];
 

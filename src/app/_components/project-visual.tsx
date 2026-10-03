@@ -36,6 +36,33 @@ export function ProjectVisual({ slug }: { slug: string }) {
     );
   }
 
+  if (slug === "mom") {
+    return (
+      <div className="project-visual visual-mom" aria-hidden="true">
+        <div className="mom-map">
+          <div className="mom-map-top"><span>SPATIAL MEMORY</span><span>ROOM SCAN / 01</span></div>
+          <div className="mom-floorplan"><div className="mom-room mom-room-living">LIVING</div><div className="mom-room mom-room-kitchen">KITCHEN<span>▣</span></div><div className="mom-room mom-room-bedroom">BEDROOM</div></div>
+          <div className="mom-query"><span>WHERE IS MY FRIDGE?</span><strong>→ KITCHEN</strong></div>
+        </div>
+        <span className="mom-caption">A PLACE FOR EVERY THING.</span>
+      </div>
+    );
+  }
+
+  if (slug === "bruin") {
+    return (
+      <div className="project-visual visual-bruin" aria-hidden="true">
+        <div className="bruin-phone">
+          <div className="bruin-phone-top"><span>BRUIN BITES</span><span>☰</span></div>
+          <div className="bruin-phone-title">Good food.<br />Good finds.</div>
+          <div className="bruin-map"><i /><i /><i /><span>✦</span><b>CHEAP EATS NEAR YOU</b></div>
+          <div className="bruin-phone-bottom"><span>EXPLORE</span><span>MAP</span><span>COMMUNITY</span></div>
+        </div>
+        <span className="bruin-caption">MADE FOR THE BRUIN COMMUNITY.</span>
+      </div>
+    );
+  }
+
   return (
     <div className="project-visual visual-ats" aria-hidden="true">
       <div className="ats-ring ring-one" /><div className="ats-ring ring-two" />
