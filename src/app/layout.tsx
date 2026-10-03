@@ -1,72 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Instrument_Serif } from "next/font/google";
+import { ScrollProgress } from "@/app/_components/reveal";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-instrument" });
 
 export const metadata: Metadata = {
-  title: "Seoungmin Kim | Portfolio",
-  description:
-    "Resume-based portfolio for Seoungmin Kim highlighting experience, projects, and contact information.",
+  title: "Seoungmin Kim — Software Engineer",
+  description: "Seoungmin Kim is a software engineer and UCLA Electrical Engineering student building dependable systems and useful digital products.",
+  openGraph: {
+    title: "Seoungmin Kim — Software Engineer",
+    description: "Software engineering, selected work, and experience.",
+    url: "https://seoungmin-portfolio.vercel.app/",
+    type: "website",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#0b132b] text-[#e2f6ff] antialiased`}
-      >
-        <div className="relative min-h-screen overflow-x-hidden">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(111,255,233,0.18),_transparent_55%)]" />
-          <div className="relative z-10 flex min-h-screen flex-col">
-            <header className="sticky top-0 z-50 border-b border-[#1c2541]/60 bg-[#0b132b]/95 shadow-lg shadow-[#0b132b]/40 backdrop-blur-lg">
-              <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#c6fff6]">
-                <Link
-                  href="/"
-                  className="transition hover:text-[#6fffe9] focus-visible:text-[#6fffe9]"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/projects"
-                  className="transition hover:text-[#6fffe9] focus-visible:text-[#6fffe9]"
-                >
-                  Projects
-                </Link>
-                <Link
-                  href="/contact"
-                  className="transition hover:text-[#6fffe9] focus-visible:text-[#6fffe9]"
-                >
-                  Contact
-                </Link>
-                <a
-                  href="/Seoungmin_Kim_Resume.pdf"
-                  download
-                  className="rounded-full border border-[#5bc0be]/50 bg-[#1c2541]/70 px-4 py-2 text-[0.65rem] font-semibold tracking-[0.4em] text-[#6fffe9] shadow-sm shadow-[#5bc0be]/30 transition hover:border-[#6fffe9]/70 hover:bg-[#1c2541]/90 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6fffe9]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b132b]"
-                >
-                  Resume
-                </a>
-              </nav>
-            </header>
-            <main className="flex-1">{children}</main>
-            <footer className="border-t border-[#1c2541]/60 bg-[#0b132b]/90 py-6 text-center text-xs uppercase tracking-[0.3em] text-[#8a9bcd]">
-              (c) {new Date().getFullYear()} Seoungmin Kim. All rights reserved.
-            </footer>
+      <body className={geist.variable + " " + instrumentSerif.variable}>
+        <ScrollProgress />
+        <header className="site-header">
+          <div className="section-shell header-inner">
+            <Link href="/" className="brand" aria-label="Seoungmin Kim, home">S<span>—</span>K<span className="brand-dot">.</span></Link>
+            <nav className="main-nav" aria-label="Main navigation"><Link href="/#work">Work</Link><Link href="/#experience">Experience</Link><Link href="/#about">About</Link></nav>
+            <Link className="header-contact" href="/#contact">Let’s talk <span aria-hidden="true">↗</span></Link>
           </div>
-        </div>
+        </header>
+        <main>{children}</main>
+        <footer className="site-footer"><div className="section-shell footer-inner"><span>© SEOUNGMIN KIM</span><span>DESIGNED & BUILT WITH INTENT.</span><Link href="/#top">BACK TO TOP ↑</Link></div></footer>
       </body>
     </html>
   );
