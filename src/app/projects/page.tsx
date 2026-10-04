@@ -1,38 +1,23 @@
-"use client";
-
-import { useState } from "react";
-import { projects, type Project } from "@/data/projects";
-import { ProjectCard } from "./_components/project-card";
-import { ProjectModal } from "./_components/project-modal";
+import Link from "next/link";
+import { ProjectFeature } from "@/app/_components/project-feature";
+import { Reveal } from "@/app/_components/reveal";
+import { projects } from "@/data/portfolio";
 
 export default function ProjectsPage() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-      <header className="mb-12 max-w-3xl space-y-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#6fffe9]">
-          My Work
-        </p>
-        <h1 className="bg-gradient-to-r from-[#6fffe9] via-[#5bc0be] to-[#8a9bcd] bg-clip-text text-4xl font-semibold text-transparent sm:text-5xl">
-          Projects & Case Studies
-        </h1>
-      </header>
-
-      <div className="space-y-8">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            project={project}
-            onSelect={setSelectedProject}
-          />
-        ))}
+    <div className="work-section subpage">
+      <div className="section-shell">
+        <div className="subpage-top"><Link href="/" className="text-link text-link-light">← Back home</Link><span>SELECTED WORK / 2025 — 2026</span></div>
+        <Reveal className="subpage-heading"><h1>Things I’ve <em>made.</em></h1><p>Five projects across infrastructure, mobile apps, and spatial computing. Here’s what went into each one.</p></Reveal>
+        <div className="project-list">
+          {projects.map((project) => (
+            <Reveal key={project.slug}>
+              <ProjectFeature project={project} />
+              <div className="project-details"><span>BEHIND THE BUILD</span><ul>{project.details.map((detail) => <li key={detail}>{detail}</li>)}</ul></div>
+            </Reveal>
+          ))}
+        </div>
       </div>
-
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
-    </section>
+    </div>
   );
 }
